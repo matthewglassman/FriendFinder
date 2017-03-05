@@ -1,0 +1,23 @@
+{
+  "name": "friendfinder",
+  "version": "0.0.1",
+  "description": "Application Using Node, Express, and Routes to make a friend matching app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewglassman/FriendFinder.git"
+  },
+  "author": "Matthew Glassman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthewglassman/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/matthewglassman/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "express": "^4.15.0"
+  }
+}
