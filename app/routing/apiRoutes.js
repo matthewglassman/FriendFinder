@@ -6,10 +6,11 @@ module.exports = function(app){
 	});
 
 	app.post("/api/friends", function(req, res){
-		let friendScore = friendData.score[i]
-		for (let i in friendscore){
-			console.log(friendscore);
-		};
+		for (i=0; i < friendData.length; i++){
+			for(j=0; j < friendData[i].score){
+				
+			}
+		}
 
 	});
 
