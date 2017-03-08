@@ -6,7 +6,10 @@ module.exports = function(app){
 	});
 
 	app.post("/api/friends", function(req, res){
+		let friendScore = friendData.score[i]
+		for (let i in friendscore){
+			console.log(friendscore);
+		};
 
-		//logic for processing survey results into the friends JSON and also to handle compatibility logic.
 	});
 

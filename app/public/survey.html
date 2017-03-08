@@ -153,5 +153,14 @@ $("#submit").on("click", function(event){
 	]};
 
 	console.log(newFriendInfo);
+
+	$.post("/api/friends", newFriendInfo, function(data){
+		if (data){
+			console.log("New friend added to list");
+
+		} else {
+			console.log("There was an error please look at your code!");
+		}
+	});
 });
 </script>
