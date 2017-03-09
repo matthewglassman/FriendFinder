@@ -24,6 +24,7 @@
 <h3><b>Question 1</b></h3>
 <h4>You like to be outdoors when possible.</h4>
 <select class="chosen-select" id="q1" data-placeholder="Choose an option">
+	<option value=""></option>
 	<option value="1">1 (Strongly Agree)</option>
 	<option value="2">2</option>
 	<option value="3">3</option>
@@ -33,6 +34,7 @@
 <h3><b>Question 2</b></h3>
 <h4>You enjoy trying new things.</h4>
 <select class="chosen-select" id="q2" data-placeholder="Choose an option">
+	<option value=""></option>
 	<option value="1">1 (Strongly Agree)</option>
 	<option value="2">2</option>
 	<option value="3">3</option>
@@ -42,6 +44,7 @@
 <h3><b>Question 3</b></h3>
 <h4>It is difficult to keep your mind in the present.</h4>
 <select class="chosen-select" id="q3" data-placeholder="Choose an option">
+	<option value=""></option>
 	<option value="1">1 (Strongly Agree)</option>
 	<option value="2">2</option>
 	<option value="3">3</option>
@@ -51,6 +54,7 @@
 <h3><b>Question 4</b></h3>
 <h4>You value open and honest communication.</h4>
 <select class="chosen-select" id="q4" data-placeholder="Choose an option">
+	<option value=""></option>
 	<option value="1">1 (Strongly Agree)</option>
 	<option value="2">2</option>
 	<option value="3">3</option>
@@ -58,8 +62,9 @@
 	<option value="5">5 (Strongly Disagree)</option>
 </select>
 <h3><b>Question 5</b></h3>
-<h4>Cats are better than dogs.</h4>
+<h4>Dogs are better than cats.</h4>
 <select class="chosen-select" id="q5" data-placeholder="Choose an option">
+	<option value=""></option>
 	<option value="1">1 (Strongly Agree)</option>
 	<option value="2">2</option>
 	<option value="3">3</option>
@@ -69,6 +74,7 @@
 <h3><b>Question 6</b></h3>
 <h4>There is humor in most anything.</h4>
 <select class="chosen-select" id="q6" data-placeholder="Choose an option">
+	<option value=""></option>
 	<option value="1">1 (Strongly Agree)</option>
 	<option value="2">2</option>
 	<option value="3">3</option>
@@ -78,6 +84,7 @@
 <h3><b>Question 7</b></h3>
 <h4>Music is important in your life.</h4>
 <select class="chosen-select" id="q7" data-placeholder="Choose an option">
+	<option value=""></option>
 	<option value="1">1 (Strongly Agree)</option>
 	<option value="2">2</option>
 	<option value="3">3</option>
@@ -87,6 +94,7 @@
 <h3><b>Question 8</b></h3>
 <h4>It takes time to come out of your shell in social situations.</h4>
 <select class="chosen-select" id="q8" data-placeholder="Choose an option">
+	<option value=""></option>
 	<option value="1">1 (Strongly Agree)</option>
 	<option value="2">2</option>
 	<option value="3">3</option>
@@ -96,6 +104,7 @@
 <h3><b>Question 9</b></h3>
 <h4>You enjoy traveling.</h4>
 <select class="chosen-select" id="q9" data-placeholder="Choose an option">
+	<option value=""></option>
 	<option value="1">1 (Strongly Agree)</option>
 	<option value="2">2</option>
 	<option value="3">3</option>
@@ -105,6 +114,7 @@
 <h3><b>Question 10</b></h3>
 <h4>You are easily stressed.</h4>
 <select class="chosen-select" id="q10" data-placeholder="Choose an option">
+	<option value=""></option>
 	<option value="1">1 (Strongly Agree)</option>
 	<option value="2">2</option>
 	<option value="3">3</option>
@@ -180,8 +190,8 @@ $("#submit").on("click", function(event){
 		var currentSite = window.location.origin;
 
 		$.post(currentSite + "/api/friends", newFriendInfo, function(data){
-			$("").text(data.name);
-			$('').attr("src", data.photo);
+			$("#friendName").text(data.name);
+			$('#friendPhoto').attr("src", data.photo);
 
 			$("#friendModal").modal('toggle');
 		});
@@ -196,4 +206,4 @@ $("#submit").on("click", function(event){
 
 
 </body>
-</html>s
+</html>

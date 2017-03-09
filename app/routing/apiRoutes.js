@@ -9,7 +9,7 @@ module.exports = function(app){
 		//variable to capture the survey takers data on submit.
 		var surveyTakerInfo = req.body;
 		//console.log(surveyTakerInfo);
-		var friendFound;
+		var friendMatch;
 		var friendsValue=null;
 
 		for(var i=0; i<friendData.length; i++){
@@ -22,9 +22,9 @@ module.exports = function(app){
 			}
 			if(currentValue < friendsValue || friendsValue === null){
 				friendsValue=currentValue;
-				friendFound = friendData[i];
+				friendMatch = friendData[i];
 			}
-			console.log(JSON.stringify(friendFound));
+			console.log(JSON.stringify(friendMatch));
 		}
 	});
 
