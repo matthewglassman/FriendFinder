@@ -1,4 +1,4 @@
-[
+var friendsArray = [
 {
 	"name":"George",
 	"photo":"http://pbskids.org/curiousgeorge/tv_schedule/img/tv_george_standing.gif",
@@ -15,3 +15,5 @@
 	1
 	]
 }]
+
+module.exports = friendsArray;
