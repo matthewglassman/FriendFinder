@@ -124,43 +124,76 @@
 	</p>
 	</div>
 </footer>
+<div id="friendModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">X</button>
+			<h2 class="modal-title">
+				<b>Best Match</b>
+			</h2>
+		</div>
+		<div class="modal-body">
+			<h2 id="friendName"></h2>
+			<img id=friendPhoto" src="">
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+	</div>
+</div>
 
-
-</body>
-</html>
-
-<!-- validation -->
 <script type="text/javascript">
 
 $("#submit").on("click", function(event){
 	event.preventDefault();
 
-	//grab select option values and output to console.
-	var newFriendInfo = {
-		friendName: $("#name").val().trim(),
-		friendPhoto: $("#photo").val().trim(),
-		scores:  [$("#q1").val(),
-		  $("#q2").val(),
-		  $("#q3").val(),
-		  $("#q4").val(),
-		  $("#q5").val(),
-		  $("#q5").val(),
-		  $("#q6").val(),
-		  $("#q7").val(),
-		  $("#q8").val(),
-		  $("#q9").val(),
-		  $("#q10").val(),
-	]};
+	function validation(){
+		var isValid = true;
+		$('.form-control').each(function(){
+			if($(this).val() === '')
+				isValid = false;
+		});
+		$('.chosen-select').each(function(){
+			if($(this).val() === "")
+				isValid = false;
+		});
+		return isValid;
+	}
 
-	console.log(newFriendInfo);
+	if (validation() == true){
+		var new FriendInfo = {
+			friendName: $("#name").val().trim(),
+			friendPhoto: $("#photo").val().trim(),
+			scores: [$("#q1").val(),
+		  			  $("#q2").val(),
+		  			  $("#q3").val(),
+		  			  $("#q4").val(),
+		  			  $("#q5").val(),
+		  			  $("#q6").val(),
+		  			  $("#q7").val(),
+		  			  $("#q8").val(),
+		  			  $("#q9").val(),
+		  			  $("#q10").val(),
+		  			  ]};
 
-	$.post("/api/friends", newFriendInfo, function(data){
-		if (data){
-			console.log("New friend added to list");
+		var currentSite = window.location.origin;
 
-		} else {
-			console.log("There was an error please look at your code!");
-		}
-	});
+		$.post(currentSite + "/api/friends", newFriendInfo, function(data){
+			$("").text(data.name);
+			$('').attr("src", data.photo);
+
+			$("#friendModal").modal('toggle');
+		});
+	}else{
+		alert("Please fill out the entire survey before submitting!");
+	}
+	return false;
 });
+
 </script>
+
+
+
+</body>
+</html>s

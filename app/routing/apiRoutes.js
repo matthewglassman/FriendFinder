@@ -6,8 +6,26 @@ module.exports = function(app){
 	});
 
 	app.post("/api/friends", function(req, res){
-		var newUser = req.body;
-		console.log(newUser);
+		//variable to capture the survey takers data on submit.
+		var surveyTakerInfo = req.body;
+		//console.log(surveyTakerInfo);
+		var friendFound;
+		var friendsValue=null;
+
+		for(var i=0; i<friendData.length; i++){
+			currentValue=0;
+			console.log(currentValue);
+			for(var j=0; j<friendData[i].scores.length; j++){
+				currentValue+=Math.abs(friendData[i].scores[j]-surveyTakerInfo.scores[j]);
+				console.log(friendData[i].name +" "+currentValue);
+				//console.log("Friends Value: " +friendsValue);
+			}
+			if(currentValue < friendsValue || friendsValue === null){
+				friendsValue=currentValue;
+				friendFound = friendData[i];
+			}
+			console.log(JSON.stringify(friendFound));
+		}
 	});
 
 	};
