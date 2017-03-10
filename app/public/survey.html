@@ -187,9 +187,9 @@ $("#submit").on("click", function(event){
 		  			  $("#q10").val(),
 		  			  ]};
 
-		var currentSite = window.location.origin;
+		//var currentSite = window.location.origin;
 
-		$.post(currentSite + "/api/friends", newFriendInfo, function(data){
+		$.post("/api/friends", newFriendInfo, function(data){
 			$("#friendName").text(data.name);
 			$('#friendPhoto').attr("src", data.photo);
 
