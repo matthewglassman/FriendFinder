@@ -29,7 +29,21 @@ var friendsArray = [
 	4,
 	5
 ]
-}
+},{
+	"name": "Linda Cardellini",
+	"photo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Linda_Cardellini_Deauville_2011.jpg",
+	"scores": [
+	5,
+	5,
+	5,
+	5,
+	5,
+	5,
+	5,
+	5,
+	5,
+	5,
+	]}
 ];
 
 module.exports = friendsArray;
