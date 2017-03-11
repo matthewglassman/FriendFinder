@@ -25,11 +25,12 @@ module.exports = function(app){
 				console.log(friendData[i].name +" "+currentValue);
 				if (currentValue < bestFriend.bestMatch){
 					bestFriend.name = friendData[i].name;
-					bestFriend.photo = friends[i].photo;
+					bestFriend.photo = friendData[i].photo;
 					bestFriend.bestMatch = currentValue;
-					console.log(bestFriend);
+					
 				}
 			};
 		};
+		console.log(bestFriend);
 	});
 };
