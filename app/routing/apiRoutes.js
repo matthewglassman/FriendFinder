@@ -35,5 +35,6 @@ module.exports = function(app){
 		};
 		console.log(bestFriend);
 		res.json(bestFriend);
+		friendData.push(surveyTakerInfo);
 	});
 };
