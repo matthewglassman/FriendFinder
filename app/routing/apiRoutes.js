@@ -22,7 +22,7 @@ module.exports = function(app){
 		for (var i = 0; i < friendData.length; i++){
 			currentValue = 0;
 			for (var j = 0; j < friendData[i].scores.length; j++){
-				currentValue+=Math.abs(friendData[i].scores[j] - surveyTakerInfo.scores[j]);
+				currentValue+=Math.abs(parseInt(friendData[i].scores[j]) - parseInt(surveyTakerInfo.scores[j]));
 				console.log(friendData[i].name +" "+currentValue);
 				
 			};
