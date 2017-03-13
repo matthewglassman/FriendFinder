@@ -173,8 +173,8 @@ $("#submit").on("click", function(event){
 
 	if (validation() == true){
 		var newFriendInfo = {
-			friendName: $("#name").val().trim(),
-			friendPhoto: $("#photo").val().trim(),
+			name: $("#name").val().trim(),
+			photo: $("#photo").val().trim(),
 			scores: [parseInt($("#q1").val()),
 		  			  parseInt($("#q2").val()),
 		  			  parseInt($("#q3").val()),
